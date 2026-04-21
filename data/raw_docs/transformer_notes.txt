@@ -1,0 +1,79 @@
+Transformers are a type of neural network architecture introduced in the paper "Attention Is All You Need" (Vaswani et al., 2017).
+
+They are designed to handle sequential data without relying on recurrent networks (RNNs) or convolutional networks (CNNs).
+
+---
+
+KEY IDEA: SELF-ATTENTION
+
+Self-attention allows the model to weigh the importance of different words in a sentence when encoding a particular word.
+
+For example, in the sentence:
+"The cat sat on the mat because it was tired"
+
+The word "it" refers to "cat", and self-attention helps the model learn this relationship.
+
+---
+
+COMPONENTS OF A TRANSFORMER:
+
+1. Encoder
+- Takes input sequence
+- Produces contextual representations
+
+2. Decoder
+- Generates output sequence
+- Uses encoder output + previous outputs
+
+---
+
+SELF-ATTENTION MECHANISM:
+
+Each input token is transformed into three vectors:
+
+- Query (Q)
+- Key (K)
+- Value (V)
+
+Attention is computed as:
+
+Attention(Q, K, V) = softmax(QK^T / sqrt(d_k)) V
+
+This allows the model to focus on relevant tokens in the sequence.
+
+---
+
+POSITIONAL ENCODING:
+
+Since transformers do not process tokens sequentially, positional encodings are added to give information about token order.
+
+---
+
+ADVANTAGES:
+
+- Parallel processing (faster training than RNNs)
+- Handles long-range dependencies well
+- Scales effectively with data
+
+---
+
+DISADVANTAGES:
+
+- High computational cost for long sequences
+- Requires large datasets to perform well
+
+---
+
+APPLICATIONS:
+
+- Machine translation
+- Text summarization
+- Chatbots (like ChatGPT)
+- Code generation
+- Vision transformers (ViT)
+
+---
+
+SUMMARY:
+
+Transformers replaced traditional sequence models by using attention mechanisms instead of recurrence, enabling more scalable and efficient deep learning models for NLP and beyond.
